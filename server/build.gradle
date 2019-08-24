@@ -1,0 +1,25 @@
+plugins {
+    id 'kotlin'
+    id 'application'
+}
+
+group 'com.github.aakira.mpp'
+version '0.0.1'
+
+mainClassName = "io.ktor.server.netty.EngineMain"
+
+sourceSets {
+    main.kotlin.srcDirs = main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['resources']
+}
+
+dependencies {
+    implementation project(':common')
+
+    implementation rootProject.ext.kotlinJvm
+
+    def ktor_server_version = "1.2.2"
+    implementation "io.ktor:ktor-server-netty:$ktor_server_version"
+    implementation "io.ktor:ktor-gson:$ktor_server_version"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+}

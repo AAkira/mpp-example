@@ -1,0 +1,28 @@
+plugins {
+    id 'org.jetbrains.kotlin.js'
+    id 'kotlin-dce-js'
+}
+
+kotlin {
+    target {
+        browser()
+    }
+}
+
+[compileKotlinJs, compileTestKotlinJs].each { config ->
+    config.kotlinOptions {
+        moduleKind = 'umd'
+        sourceMap = true
+        metaInfo = true
+    }
+}
+
+dependencies {
+    implementation project(':common')
+
+    implementation rootProject.ext.kotlinJs
+    implementation rootProject.ext.coroutineJs
+    implementation rootProject.ext.serializationJs
+    implementation rootProject.ext.ktorClientJs
+    implementation rootProject.ext.ktorClientJsonJs
+}

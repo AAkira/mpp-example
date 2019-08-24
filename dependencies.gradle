@@ -1,0 +1,47 @@
+ext {
+    // This library version
+    LIBRARY_VERSION_CODE = 6
+    LIBRARY_VERSION_NAME = "0.0.6"
+
+    // android
+    mobileVersionCode = 1
+    mobileVersionName = "1.0.0"
+    compileSdkVersion = 28
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 28
+
+    // dependencies
+
+    // kotlin
+    kotlinJvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    kotlinCommon = "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+    kotlinJs = "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+
+    // serialization
+    serialization_version = "0.11.1"
+    serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+    serializationCommon = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+    serializationNative = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+    serializationJs = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:$serialization_version"
+
+    // coroutine
+    coroutine_version = "1.2.2"
+    coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+    coroutineCommon = "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutine_version"
+    coroutineNative = "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutine_version"
+    coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+    coroutineJs = "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$coroutine_version"
+
+    // ktor client
+    ktor_version = "1.2.2"
+    ktorClient = "io.ktor:ktor-client-core:$ktor_version"
+    ktorClientJson = "io.ktor:ktor-client-gson:$ktor_version"
+    ktorClientAndroid = "io.ktor:ktor-client-android:$ktor_version"
+    ktorClientJvm = "io.ktor:ktor-client-core-jvm:$ktor_version"
+    ktorClientJsonJvm = "io.ktor:ktor-client-json-jvm:$ktor_version"
+    ktorClientIos = "io.ktor:ktor-client-ios:$ktor_version"
+    ktorClientJsonIos = "io.ktor:ktor-client-json-native:$ktor_version"
+    ktorClientJs = "io.ktor:ktor-client-js:$ktor_version"
+    ktorClientJsonJs = "io.ktor:ktor-client-json-js:$ktor_version"
+}

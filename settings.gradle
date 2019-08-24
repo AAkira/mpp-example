@@ -1,0 +1,5 @@
+rootProject.name='mpp'
+
+include ':common', ':android', ':web', ':server'
+
+enableFeaturePreview('GRADLE_METADATA')
