@@ -4,9 +4,6 @@ plugins {
 }
 
 kotlin {
-    target {
-        browser()
-    }
 }
 
 [compileKotlinJs, compileTestKotlinJs].each { config ->
