@@ -4,22 +4,23 @@ plugins {
 }
 
 kotlin {
-}
-
-[compileKotlinJs, compileTestKotlinJs].each { config ->
-    config.kotlinOptions {
-        moduleKind = 'umd'
-        sourceMap = true
-        metaInfo = true
+    target {
+        browser {
+            webpackTask {
+                archiveFileName = 'main.js'
+            }
+        }
     }
-}
+    sourceSets {
+        main {
+            dependencies {
+                implementation project(':common')
+                implementation rootProject.ext.kotlinJs
 
-dependencies {
-    implementation project(':common')
-
-    implementation rootProject.ext.kotlinJs
-    implementation rootProject.ext.coroutineJs
-    implementation rootProject.ext.serializationJs
-    implementation rootProject.ext.ktorClientJs
-    implementation rootProject.ext.ktorClientJsonJs
+                implementation npm("text-encoding", "^0.7.0")
+                implementation npm("utf-8-validate", "^5.0.2")
+                implementation npm("bufferutil", "^4.0.1")
+            }
+        }
+    }
 }

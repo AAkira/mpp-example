@@ -3,7 +3,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
@@ -16,12 +15,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
 
 apply from: rootProject.file('dependencies.gradle')

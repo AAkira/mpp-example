@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
+
 plugins {
     id 'kotlin-multiplatform'
     id 'kotlinx-serialization'
@@ -20,7 +22,17 @@ kotlin {
             }
         }
     }
-    js() {
+    js {
+        browser()
+        compilations.all {
+            tasks.withType(Kotlin2JsCompile) {
+                kotlinOptions {
+                    metaInfo = true
+                    sourceMap = true
+                    moduleKind = 'umd'
+                }
+            }
+        }
     }
     jvm()
 
