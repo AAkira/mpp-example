@@ -25,7 +25,7 @@ It works on Web browsers.
 
 * Build command
 
-`./gradlew :web:build`
+`./gradlew :web:browserWebpack`
 
 * Open this file on your browser after building.
 
