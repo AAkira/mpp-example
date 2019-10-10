@@ -44,4 +44,12 @@ ext {
     ktorClientJsonIos = "io.ktor:ktor-client-json-native:$ktor_version"
     ktorClientJs = "io.ktor:ktor-client-js:$ktor_version"
     ktorClientJsonJs = "io.ktor:ktor-client-json-js:$ktor_version"
+
+    // napier
+    napierVersion = "1.0.0"
+    napierCommon = "com.github.aakira:napier:$napierVersion"
+    napierAndroid = "com.github.aakira:napier-android:$napierVersion"
+    napierIOS = "com.github.aakira:napier-ios:$napierVersion"
+    napierJvm = "com.github.aakira:napier-jvm:$napierVersion"
+    napierJs = "com.github.aakira:napier-js:$napierVersion"
 }

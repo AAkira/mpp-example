@@ -17,6 +17,8 @@ kotlin {
                 implementation project(':common')
                 implementation rootProject.ext.kotlinJs
 
+                implementation rootProject.ext.napierJs
+
                 implementation npm("text-encoding", "^0.7.0")
                 implementation npm("utf-8-validate", "^5.0.2")
                 implementation npm("bufferutil", "^4.0.1")
