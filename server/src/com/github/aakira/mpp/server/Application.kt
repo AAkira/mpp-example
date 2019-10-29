@@ -1,6 +1,5 @@
 package com.github.aakira.mpp.server
 
-import com.github.aakira.mpp.common.Greeting
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -26,7 +25,12 @@ fun Application.module() {
     }
     install(Routing) {
         get("/") {
-            call.respond(Greeting("Hello World form server!"))
+            call.respond(
+                com.github.aakira.mpp.common.model.Greeting(
+                    "Hello World form server!",
+                    "Bye bye."
+                )
+            )
         }
     }
 }

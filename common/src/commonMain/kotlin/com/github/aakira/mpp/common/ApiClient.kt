@@ -1,5 +1,6 @@
 package com.github.aakira.mpp.common
 
+import com.github.aakira.mpp.common.model.Greeting
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.http.URLProtocol

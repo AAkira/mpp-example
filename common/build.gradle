@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
 plugins {
     id 'kotlin-multiplatform'
     id 'kotlinx-serialization'
+    id 'com.squareup.sqldelight'
 }
 
 apply from: 'android.gradle'
@@ -44,6 +45,7 @@ kotlin {
                 implementation rootProject.ext.serializationCommon
                 implementation rootProject.ext.ktorClient
                 implementation rootProject.ext.ktorClientJson
+                implementation "com.squareup.sqldelight:coroutines-extensions:1.2.0"
             }
         }
         androidMain {
@@ -56,6 +58,7 @@ kotlin {
                 implementation rootProject.ext.serializationNative
                 implementation rootProject.ext.ktorClientIos
                 implementation rootProject.ext.ktorClientJsonIos
+                implementation rootProject.ext.delightIos
             }
         }
         jsMain {
@@ -74,8 +77,17 @@ kotlin {
                 implementation rootProject.ext.serialization
                 implementation rootProject.ext.ktorClientJvm
                 implementation rootProject.ext.ktorClientJsonJvm
+                implementation rootProject.ext.delightJvm
             }
         }
+    }
+}
+
+// sql delight
+sqldelight {
+    GreetingDatabase {
+        packageName = "com.github.aakira.mpp.common"
+        sourceFolders = ["sqldelight"]
     }
 }
 

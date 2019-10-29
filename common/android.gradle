@@ -33,4 +33,5 @@ dependencies {
     implementation rootProject.ext.coroutine
     implementation rootProject.ext.ktorClientAndroid
     implementation rootProject.ext.serialization
+    implementation rootProject.ext.delightAndroid
 }

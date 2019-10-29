@@ -1,0 +1,14 @@
+CREATE TABLE Greeting(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    hello TEXT NOT NULL,
+    bye TEXT NOT NULL
+);
+
+insertItem:
+INSERT OR REPLACE INTO Greeting(hello, bye) VALUES(?,?);
+
+selectAll:
+SELECT * FROM Greeting;
+
+selectById:
+SELECT * FROM Greeting WHERE id = ?;

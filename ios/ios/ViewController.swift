@@ -20,5 +20,16 @@ class ViewController: UIViewController {
                 print(error)
             }
         )
+        
+        let dao = GreetingDao()
+        dao.storeGreeting(hello: "hello", bye: "bye")
+        
+        let greetings = dao.getGreetings()
+        greetings.forEach { greeting in
+            print(greeting)
+        }
+        
+        let flow = dao.getGreetingsFlow()
+
     }
 }

@@ -1,5 +1,6 @@
 package com.github.aakira.mpp.common
 
+import com.squareup.sqldelight.drivers.ios.NativeSqliteDriver
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Runnable
 import platform.darwin.dispatch_async
@@ -20,3 +21,5 @@ internal class NsQueueDispatcher(private val dispatchQueue: dispatch_queue_t) :
         }
     }
 }
+
+actual fun createDb(): GreetingDatabase? = GreetingDatabase(NativeSqliteDriver(GreetingDatabase.Schema, dbName))

@@ -44,4 +44,10 @@ ext {
     ktorClientJsonIos = "io.ktor:ktor-client-json-native:$ktor_version"
     ktorClientJs = "io.ktor:ktor-client-js:$ktor_version"
     ktorClientJsonJs = "io.ktor:ktor-client-json-js:$ktor_version"
+
+    // sql delight
+    sql_delight_version = "1.2.0"
+    delightJvm = "com.squareup.sqldelight:sqlite-driver:$sql_delight_version"
+    delightAndroid = "com.squareup.sqldelight:android-driver:$sql_delight_version"
+    delightIos = "com.squareup.sqldelight:ios-driver:$sql_delight_version"
 }
