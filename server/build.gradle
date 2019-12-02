@@ -18,7 +18,7 @@ dependencies {
 
     implementation rootProject.ext.kotlinJvm
 
-    def ktor_server_version = "1.2.2"
+    def ktor_server_version = "1.2.6"
     implementation "io.ktor:ktor-server-netty:$ktor_server_version"
     implementation "io.ktor:ktor-gson:$ktor_server_version"
     implementation "ch.qos.logback:logback-classic:1.2.3"
