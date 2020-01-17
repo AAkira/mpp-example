@@ -19,7 +19,7 @@ ext {
     kotlinJs = "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 
     // serialization
-    serialization_version = "0.14.0-1.3.60-eap-76"
+    serialization_version = "0.14.0"
     serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
     serializationCommon = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
     serializationNative = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
