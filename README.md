@@ -5,19 +5,34 @@ This project is a minimum mpp project.
 This application has Android, iOS, Web and Server modules.  
 The server returns a simple JSON object and clients show it on each view.
 
-## Android
+## Example for
+
+I made this repository for explaining my presentation and book.  
+I'm sorry both are in Japanese.
+
+* Kotlin Fest 2019発表時のサンプルは[こちら](https://github.com/AAkira/mpp-example/tree/KotlinFest2019)  
+Tag: KotlinFest2019   
+Slide link: [Speaker deck](https://speakerdeck.com/aakira/introduction-kotlin-mpp)
+
+* みんなのKotlin執筆時のサンプルは[こちら](https://github.com/AAkira/mpp-example/tree/KotlinForEveryone)  
+Tag: KotlinForEveryone   
+Book link: [Amazon](https://amzn.to/2FZRLiZ)
+
+## Run on each platform 
+
+### Android
 
 It works on Android Studio.
 
 ![preview-android][preview-android]
 
-## iOS
+### iOS
 
 It works on XCode.
 
 ![preview-ios][preview-ios]
 
-## Web
+### Web
 
 It works on Web browsers.
 
@@ -31,7 +46,7 @@ It works on Web browsers.
 
 `/web/src/main/resources/index.html`
 
-## Server
+### Server
 
 It works on localhost:8080.
 
