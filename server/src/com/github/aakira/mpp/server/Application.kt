@@ -4,6 +4,7 @@ import com.github.aakira.mpp.common.Greeting
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
+import io.ktor.features.CORS
 import io.ktor.features.CallLogging
 import io.ktor.features.ContentNegotiation
 import io.ktor.features.DefaultHeaders
@@ -16,10 +17,7 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun Application.module() {
-    install(DefaultHeaders) {
-        // WEBブラウザからアクセスするために全ての通信を許可(CORS)
-        header(HttpHeaders.AccessControlAllowOrigin, "*")
-    }
+    install(CORS)
     install(CallLogging)
     install(ContentNegotiation) {
         gson()

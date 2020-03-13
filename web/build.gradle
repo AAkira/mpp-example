@@ -21,6 +21,7 @@ kotlin {
                 implementation npm("utf-8-validate", "^5.0.2")
                 implementation npm("bufferutil", "^4.0.1")
                 implementation npm("fs-extra", "^8.1.0")
+                implementation npm("abort-controller", "^3.0.0")
             }
         }
     }
